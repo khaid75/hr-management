@@ -1,0 +1,81 @@
+<div class="container">
+  <!-- Add Payroll Section -->
+  <h2 class="text-center mb-4">Add Payroll</h2>
+  <form (ngSubmit)="addPayroll()" class="mb-4">
+    <div class="row">
+      <div class="col-md-2">
+        <input type="text" [(ngModel)]="newPayroll.employeeName" name="employeeName" class="form-control form-control-sm" placeholder="Employee Name" required>
+      </div>
+      <div class="col-md-2">
+        <input type="number" [(ngModel)]="newPayroll.salary" name="salary" class="form-control form-control-sm" placeholder="Salary" required>
+      </div>
+      <div class="col-md-2">
+        <input type="text" [(ngModel)]="newPayroll.designation" name="designation" class="form-control form-control-sm" placeholder="Designation" required>
+      </div>
+      <div class="col-md-2">
+        <select [(ngModel)]="newPayroll.month" name="month" class="form-control form-control-sm" required>
+          <option value="" disabled selected>Month</option>
+          <option *ngFor="let m of months" [value]="m">{{ m }}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <input type="number" [(ngModel)]="newPayroll.year" name="year" class="form-control form-control-sm" placeholder="Year" required>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-success btn-sm w-100">Add</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Search Section -->
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3 d-flex">
+      <input type="text" [(ngModel)]="searchQuery" (input)="searchPayroll()" class="form-control form-control-sm w-75" placeholder="Search Payroll by Employee Name">
+      <button class="btn btn-primary ms-2" (click)="searchPayroll()">Search</button>
+    </div>
+  </div>
+
+  <!-- Payroll Table -->
+  <h2 class="text-center mb-4">Payroll List</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Employee Name</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>Month</th>
+        <th>Year</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payroll of payrolls">
+        <td>{{ payroll.id }}</td>
+        <td>{{ payroll.employeeName }}</td>
+        <td>{{ payroll.salary }}</td>
+        <td>{{ payroll.designation }}</td>
+        <td>{{ payroll.month }}</td>
+        <td>{{ payroll.year }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm ms-2">Edit</button>
+          <button class="btn btn-danger btn-sm ms-2" (click)="payroll.id ? deletePayroll(payroll.id) : null">Delete</button>  
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <h1>Generate Report</h1>
+    <button (click)="generateReport('pdf')">Generate PDF Report</button>
+    <button (click)="generateReport('html')">Generate HTML Report</button>
+    <button (click)="generateReport('xlsx')">Generate Excel Report</button>
+    <button (click)="generateReport('csv')">Generate CSV Report</button>
+    <button (click)="generateReport('docx')">Generate DOCX Report</button>
+  </div>
+  
+  
+  
+  
+  
+</div>

@@ -1,0 +1,57 @@
+<!-- 
+
+
+
+
+
+<div class="sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/employee-list">Employee List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/add-employee/create">Add Employee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/attendance">Attendance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/leave-management">Leave Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/reports">Reports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/payroll">Payroll</a>
+      </li>
+    </ul>
+
+    <div class="theme-toggle">
+      <button class="dark-btn" onclick="document.body.setAttribute('data-bs-theme','dark')">Dark Mode</button>
+      <button class="light-btn" onclick="document.body.setAttribute('data-bs-theme','light')">Light Mode</button>
+  </div>
+  
+  </div>
+
+
+
+   Main Content
+  <div class="main-content ">
+
+    <nav class="top-navbar">
+      <span class="admin-logo">HR Management</span>
+      <span class="navbar-text">Welcome, Admin</span>
+      <button class="logout-btn" (click)="logOut()">Logout</button>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+
+
+ -->
+<app-navbar></app-navbar>

@@ -1,0 +1,56 @@
+.container {
+    background: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+    h3 {
+      font-weight: bold;
+      color: #333;
+    }
+  
+    .form-label {
+      font-weight: 600;
+      color: #555;
+    }
+  
+    .form-control, .form-select {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+  
+    .btn-primary {
+      font-weight: bold;
+      background: #007bff;
+      border: none;
+      transition: 0.3s;
+  
+      &:hover {
+        background: #0056b3;
+      }
+  
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  
+    .text-center a {
+      color: #007bff;
+      font-weight: bold;
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  

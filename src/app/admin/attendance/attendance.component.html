@@ -1,0 +1,53 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Employee Attendance List</h2>
+  
+    <!-- Search and Filter -->
+    <div class="d-flex justify-content-between mb-3">
+      <input type="text" class="form-control w-50" placeholder="Search Employee..." (input)="searchEmployee($event)">
+      <select class="form-select w-25" (change)="filterAttendance($event)">
+        <option value="">All</option>
+        <option value="present">Present</option>
+        <option value="absent">Absent</option>
+      </select>
+    </div>
+      <!-- Attendance List -->
+      <div class="table-responsive mt-4">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Date</th>
+                    <th>Check-in</th>
+                    <th>Check-out</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let att of attendances">
+                    <td>{{ att.id }}</td>
+                    <td>{{ att.userName }}</td>
+                    <td>{{ att.date }}</td>
+                    <td>{{ att.checkInTime }}</td>
+                    <td>{{ att.checkOutTime }}</td>
+                    <td>
+                        <span class="badge" [ngClass]="{
+                            'bg-success': att.status === 'Present',
+                            'bg-danger': att.status === 'Absent',
+                            'bg-warning': att.status === 'Late'
+                        }">
+                            {{ att.status }}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="deleteAttendance(att.id)">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  

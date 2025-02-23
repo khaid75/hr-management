@@ -1,0 +1,134 @@
+/* Full Layout */
+.layout {
+    display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 60px; /* Navbar এর নিচে রাখতে */
+    left: 0;
+    background: #343a40; /* Sidebar Color */
+    padding-top: 20px;
+    transition: all 0.3s;
+}
+.sidebar .nav-link {
+    color: white;
+    font-size: 18px;
+    padding: 20px 20px;
+    display: block;
+    text-decoration: none;
+}
+.sidebar .nav-link:hover {
+    background: #495057;
+    color: #fff;
+}
+
+/* Main Content Wrapper */
+.main-content {
+    margin-left: 250px; /* Sidebar Width */
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    background: hsl(0, 0%, 100%); /* Light Gray Background */
+    padding-top: 60px; /* Navbar এর নিচে রাখতে */
+    margin-top: 60px; /* Make sure the content doesn't hide behind the navbar */
+}
+
+
+/* Top Navbar */
+.top-navbar {
+    height: 60px;
+    width: 100%;
+    background: #495057; /* Same as Sidebar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Sidebar এর উপরে রাখবে */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar-text {
+    font-size: 18px;
+    margin-left: 100px; /* বাম পাশে নিয়ে যাওয়া */
+    margin-right: auto; /* ডান পাশে গ্যাপ রাখবে */
+}
+
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.logout-btn:hover {
+    background: white;
+    color: #007bff;
+}
+
+/* Content Area */
+.content {
+    padding: 20px;
+    margin-top: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Theme Toggle Buttons */
+.theme-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px; /* Sidebar এর নিচে কিছু গ্যাপ রাখার জন্য */
+    align-items: center;
+}
+
+.theme-toggle button {
+    width: 120px;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Dark Button */
+.theme-toggle .dark-btn {
+    background: #212529;
+    color: white;
+    border: 2px solid #f8f9fa;
+}
+
+.theme-toggle .dark-btn:hover {
+    background: #f8f9fa;
+    color: #212529;
+}
+
+/* Light Button */
+.theme-toggle .light-btn {
+    background: #f8f9fa;
+    color: #212529;
+    border: 2px solid #212529;
+}
+
+.theme-toggle .light-btn:hover {
+    background: #212529;
+    color: #f8f9fa;
+}

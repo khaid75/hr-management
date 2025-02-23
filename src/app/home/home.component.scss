@@ -1,0 +1,259 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#p1 {
+    font-size: 3.1rem;
+}
+
+#p2 {
+    font-size: 2.5rem;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Carousel Caption */
+.carousel-caption {
+    font-size: 2.9rem;
+    height: 29rem;
+}
+
+/* Main Section */
+.divMain {
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+.section-2 {
+    background-color: white;
+    height: -20rem;
+}
+
+.section-2 .fit-image {
+    height: 40rem;
+}
+
+.text {
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+}
+
+.text #t1 {
+    margin-left: 7rem;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1rem 3rem;
+    padding: 0;
+}
+
+li {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+ul.category {
+    margin-left: 0;
+}
+
+ul.category li {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+ul.subcategory {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+ul.subcategory li {
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #e6f7ff, #ffffff);
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.team-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 18px;
+    height: 100%; /* Make the card take full height */
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.container {
+    padding: 0 16px;
+    flex: 1;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+
+    .button {
+        width: 100%; /* Ensure button takes full width on smaller screens */
+        padding: 10px 0; /* Add some space for touch screens */
+    }
+}
+
+/* Additional Card Styling */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    margin: 15px;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    border-radius: 15px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.card h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+
+.card p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.card .btn {
+    background: linear-gradient(to right, #007bff, #00d4ff);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+    background: linear-gradient(to right, #0056b3, #0099cc);
+    color: #fff;
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+

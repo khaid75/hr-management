@@ -1,0 +1,50 @@
+.leave-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+  
+    .filters {
+      margin-bottom: 10px;
+      input, select {
+        padding: 5px;
+        margin: 5px;
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+  
+      th {
+        background: #f4f4f4;
+      }
+  
+      button {
+        margin: 5px;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+  
+        &:first-child {
+          background: green;
+          color: white;
+        }
+  
+        &:nth-child(2) {
+          background: red;
+          color: white;
+        }
+  
+        &:last-child {
+          background: gray;
+          color: white;
+        }
+      }
+    }
+  }
+  

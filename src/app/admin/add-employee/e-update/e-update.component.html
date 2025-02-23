@@ -1,0 +1,63 @@
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white text-center">
+      <h2>Update Employee</h2>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="updateEmployee()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="employee.name"
+            name="name"
+            class="form-control"
+            placeholder="Enter employee name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="employee.email"
+            name="email"
+            class="form-control"
+            placeholder="Enter employee email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone:</label>
+          <input
+            type="text"
+            id="phone"
+            [(ngModel)]="employee.phone"
+            name="phone"
+            class="form-control"
+            placeholder="Enter employee phone number"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="designation" class="form-label">Designation:</label>
+          <input
+            type="text"
+            id="designation"
+            [(ngModel)]="employee.designation"
+            name="designation"
+            class="form-control"
+            placeholder="Enter employee designation"
+            required
+          />
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-success">Update</button>
+          <button type="button" class="btn btn-secondary" routerLink="/admin/add-employee/list">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

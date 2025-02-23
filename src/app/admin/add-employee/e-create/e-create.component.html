@@ -1,0 +1,62 @@
+<div class="container">
+  <h2 class="text-center mb-4 title">✨ Add Employee ✨</h2>
+
+  <form (ngSubmit)="addEmployee()" class="form-container">
+    <div class="input-group">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" [(ngModel)]="employee.name" name="name" class="form-control" id="name" required />
+    </div>
+
+    <div class="input-group">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" [(ngModel)]="employee.email" name="email" class="form-control" id="email" required />
+    </div>
+
+    <div class="input-group">
+      <label for="mobile" class="form-label">Mobile:</label>
+      <input type="text" [(ngModel)]="employee.mobile" name="mobile" class="form-control" id="mobile" required />
+    </div>
+
+    <div class="input-group">
+      <!-- Department Dropdown -->
+      <label for="department" class="form-label">Department:</label>
+      <select
+        [(ngModel)]="employee.department"
+        name="department"
+        id="department"
+        class="form-control"
+        required
+      >
+        <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+      </select>
+    </div>
+
+
+
+    <div class="input-group">
+      <!-- Department Dropdown -->
+      <label for="department" class="form-label">User Name:</label>
+      <select
+        [(ngModel)]="employee.username"
+        name="username"
+        id="username"
+        class="form-control"
+        required
+      >
+        <option *ngFor="let dept of users" [value]="dept">{{ dept.userName }}</option>
+      </select>
+    </div>
+    <!-- New Photo Upload Field -->
+    <div class="input-group">
+      <label for="photo" class="form-label">Upload Photo:</label>
+      <input type="file" id="imageFile" (change)="onFileSelected($event)" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">🚀 Add Employee</button>
+  </form>
+
+  <!-- View Employees Button -->
+  <div class="text-center">
+    <button class="btn btn-secondary" routerLink="/admin/add-employee/list">👀 View Employees</button>
+  </div>
+</div>

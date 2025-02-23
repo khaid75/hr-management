@@ -1,0 +1,50 @@
+.employee-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.btn-primary, .btn-success {
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px solid #ddd;
+}
+
+.table-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table th, .table td {
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.btn-sm {
+  font-size: 0.85rem;
+}
+
+.mt-4 {
+  margin-top: 2rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}

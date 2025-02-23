@@ -1,0 +1,114 @@
+/* 🌟 Body Styling */
+body {
+  background: linear-gradient(120deg, #3a6186, #89253e);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* 🌟 Container Styling (Wider Form) */
+.container {
+  max-width: 700px;  /* 🔥 আগের 550px থেকে 700px করা হয়েছে */
+  width: 100%;
+  padding: 40px; /* Extra Padding */
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 🌟 Title Styling */
+.title {
+  font-size: 30px; /* 🔥 বড় করা হয়েছে */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #89253e;
+}
+
+/* 🌟 Form Styling */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 🌟 Input Group Styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* 🌟 Label Styling */
+.form-label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* 🌟 Input Field Styling */
+.form-control {
+  width: 100%; /* 🔥 ইনপুট ফিল্ড ফুল ওয়াইড হবে */
+  border: 2px solid #89253e;
+  padding: 12px; /* 🔥 বড় করা হয়েছে */
+  border-radius: 8px;
+  font-size: 18px; /* 🔥 ফন্ট সাইজও বাড়ানো হয়েছে */
+  transition: 0.3s;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  outline: none;
+  background-color: #f8f9fa;
+  box-shadow: 0px 0px 10px rgba(137, 37, 62, 0.5);
+  border-color: #5e172a;
+}
+
+/* 🌟 Button Styling */
+.btn {
+  width: 100%; /* 🔥 বাটনও পুরো প্রস্থ (wide) হবে */
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: none;
+}
+
+.btn-primary {
+  background: #89253e;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5e172a;
+}
+
+/* 🌟 Secondary Button */
+.btn-secondary {
+  margin-top: 15px;
+  background: #3a6186;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #2a4d69;
+}
+
+/* ✨ Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

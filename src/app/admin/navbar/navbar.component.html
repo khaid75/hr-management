@@ -1,0 +1,158 @@
+<!-- <nav class="navbar navbar-expand-lg  bg-info pb-0 px-5">
+  <a class="navbar-brand" href="#">HR Management</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/add-employee/list">Employee List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/add-employee/create">Add Employee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/attendance">Attendance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/leave-management">Leave Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/reports">Reports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" routerLink="/admin/payroll">Payroll</a>
+      </li>
+    </ul>
+    <div class="ms-auto">
+      <button type="button" class="btn btn-outline-primary" onclick="document.body.setAttribute('data-bs-theme','dark')">
+        Dark
+      </button>
+      <button type="button" class="btn btn-outline-primary" onclick="document.body.setAttribute('data-bs-theme','light')">
+        Light
+      </button>
+      <button type="button" class="btn btn-outline-primary" onclick="logOut()">
+        logout
+      </button>
+    </div>
+  </div>
+</nav> -->
+
+
+  <!-- Sidebar -->
+  <!-- <div class="sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/employee-list">Employee List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/add-employee/create">Add Employee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/attendance">Attendance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/leave-management">Leave Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/reports">Reports</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/payroll">Payroll</a>
+      </li>
+    </ul>
+
+    <div class="theme-toggle">
+      <button class="dark-btn" onclick="document.body.setAttribute('data-bs-theme','dark')">Dark Mode</button>
+      <button class="light-btn" onclick="document.body.setAttribute('data-bs-theme','light')">Light Mode</button>
+  </div>
+  
+  </div>
+
+
+
+  <div class="main-content">
+
+    <nav class="top-navbar">
+      <span class="admin-logo">HR Management</span>
+      <span class="navbar-text">Welcome, Admin</span>
+      <button class="logout-btn" (click)="logOut()">Logout</button>
+    </nav>
+  </div>
+ -->
+
+  <!-- Main Content
+  <div class="main-content ">
+
+    <nav class="top-navbar">
+      <span class="admin-logo">HR Management</span>
+      <span class="navbar-text">Welcome, Admin</span>
+      <button class="logout-btn" (click)="logOut()">Logout</button>
+    </nav>
+    <router-outlet></router-outlet>
+    </div> -->
+
+    
+
+
+
+
+
+<div class="sidebar">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/dashboard">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/employee-list">Employee List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/add-employee/create">Add Employee</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/attendance">Attendance</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/leave-management">Leave Management</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/reports">Reports</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/payroll">Payroll</a>
+    </li>
+  </ul>
+
+  <div class="theme-toggle">
+    <button class="dark-btn" onclick="document.body.setAttribute('data-bs-theme','dark')">Dark Mode</button>
+    <button class="light-btn" onclick="document.body.setAttribute('data-bs-theme','light')">Light Mode</button>
+</div>
+
+</div>
+
+
+
+<!-- Main Content -->
+<div class="main-content ">
+
+  <nav class="top-navbar">
+    <span class="admin-logo">HR Management</span>
+    <span class="navbar-text">Welcome, Admin</span>
+    <button class="logout-btn" (click)="logOut()">Logout</button>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+

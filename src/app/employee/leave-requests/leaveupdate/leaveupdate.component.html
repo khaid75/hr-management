@@ -1,0 +1,69 @@
+<div class="update-leave-form mt-5">
+    <h2 class="form-heading text-center mb-3">Update Leave</h2>
+    <form (ngSubmit)="onUpdate()">
+      <div class="form-group">
+        <label for="employeeName">Employee Name:</label>
+        <input
+          id="employeeName"
+          type="text"
+          [(ngModel)]="leaveData.employeeName"
+          name="employeeName"
+          class="form-control form-control-sm"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="leaveType">Leave Type:</label>
+        <input
+          id="leaveType"
+          type="text"
+          [(ngModel)]="leaveData.leaveType"
+          name="leaveType"
+          class="form-control form-control-sm"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input
+          id="startDate"
+          type="date"
+          [(ngModel)]="leaveData.startDate"
+          name="startDate"
+          class="form-control form-control-sm"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input
+          id="endDate"
+          type="date"
+          [(ngModel)]="leaveData.endDate"
+          name="endDate"
+          class="form-control form-control-sm"
+          required
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select
+          id="status"
+          [(ngModel)]="leaveData.status"
+          name="status"
+          class="form-control form-control-sm"
+        >
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary btn-sm btn-block">Update Leave</button>
+    </form>
+  </div>
+  

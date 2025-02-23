@@ -1,0 +1,84 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Attendance Management</h2>
+
+    <!-- Add Attendance Form -->
+    <div class="card p-4 shadow-lg">
+        <form (ngSubmit)="addAttendance()" class="row g-3">
+            <div class="col-md-3">
+                <label for="employeeId" class="form-label fw-bold">Employee ID</label>
+                <input type="text" id="employeeId" class="form-control" [(ngModel)]="newAttendance.employeeId" name="employeeId"
+                    placeholder="Enter Employee ID" required>
+            </div>
+            <div class="col-md-3">
+                <label for="name" class="form-label fw-bold">Employee Name</label>
+                <input type="text" id="name" class="form-control" [(ngModel)]="newAttendance.name" name="name"
+                    placeholder="Enter Employee Name" required>
+            </div>
+            <div class="col-md-2">
+                <label for="date" class="form-label fw-bold">Date</label>
+                <input type="date" id="date" class="form-control" [(ngModel)]="newAttendance.date" name="date" required>
+            </div>
+            <div class="col-md-2">
+                <label for="checkInTime" class="form-label fw-bold">Check-in Time</label>
+                <input type="time" id="checkInTime" class="form-control" [(ngModel)]="newAttendance.checkInTime" name="checkInTime" required>
+            </div>
+            <div class="col-md-2">
+                <label for="checkOutTime" class="form-label fw-bold">Check-out Time</label>
+                <input type="time" id="checkOutTime" class="form-control" [(ngModel)]="newAttendance.checkOutTime" name="checkOutTime" required>
+            </div>
+            <div class="col-md-2">
+                <label for="status" class="form-label fw-bold">Status</label>
+                <select id="status" class="form-select" [(ngModel)]="newAttendance.status" name="status" required>
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                    <option value="Late">Late</option>
+                </select>
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary px-4">
+                    <i class="bi bi-plus-circle"></i> Add Attendance
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Attendance List -->
+    <div class="table-responsive mt-4">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Date</th>
+                    <th>Check-in</th>
+                    <th>Check-out</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let att of attendances">
+                    <td>{{ att.id }}</td>
+                    <td>{{ att.userName }}</td>
+                    <td>{{ att.date }}</td>
+                    <td>{{ att.checkInTime }}</td>
+                    <td>{{ att.checkOutTime }}</td>
+                    <td>
+                        <span class="badge" [ngClass]="{
+                            'bg-success': att.status === 'Present',
+                            'bg-danger': att.status === 'Absent',
+                            'bg-warning': att.status === 'Late'
+                        }">
+                            {{ att.status }}
+                        </span>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="deleteAttendance(att.id)">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

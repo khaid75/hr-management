@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  /* Card Styles */
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  /* Attendance Overview Pie Chart */
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Progress Bar */
+  .progress {
+    height: 15px;
+    background-color: #e9ecef;
+  }
+  
+  .progress-bar {
+    transition: width 0.6s ease;
+  }
+  
+  .bg-success {
+    background-color: #28a745 !important;
+  }
+  
+  /* Badge */
+  .badge {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  /* List of Activities */
+  .list-group-item {
+    border: none;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  
+  .list-group-item:first-child {
+    border-top: 1px solid #ddd;
+  }
+  
+  .list-group-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Text Muted */
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .col-md-4, .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  

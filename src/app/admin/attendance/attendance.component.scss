@@ -1,0 +1,28 @@
+.container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #343a40;
+  }
+  
+  .table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  th {
+    text-align: center;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  .btn-sm {
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,70 @@
+<div class="container">
+  <!-- Search Section -->
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3 d-flex">
+      <input type="text" [(ngModel)]="searchQuery" (input)="onSearch()" class="form-control form-control-sm w-75 mt-3" placeholder="Search Employee by Name">
+      <button class="btn btn-primary ms-2 mt-3" (click)="onSearch()">Search</button>
+    </div>
+  </div>
+
+  <!-- Employee Details View -->
+  <div *ngIf="filteredEmployee">
+    <h4 class="text-center mb-3 employee-heading">Employee Details</h4>
+    <div class="list-group mb-4">
+      <div class="list-group-item"><strong>Name:</strong> {{ filteredEmployee.name }}</div>
+      <div class="list-group-item"><strong>Email:</strong> {{ filteredEmployee.email }}</div>
+      <div class="list-group-item"><strong>Mobile:</strong> {{ filteredEmployee.mobile }}</div>
+      <div class="list-group-item"><strong>Department:</strong> {{ filteredEmployee.department }}</div>
+    </div>
+    <button class="btn btn-danger btn-sm" (click)="deleteEmployee(filteredEmployee.id)">Delete Employee</button>
+  </div>
+
+  <!-- Employee Table -->
+  <h2 class="text-center mb-4">Employee List</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Department</th>
+        <th>Photo</th> <!-- New column for Photo -->
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.mobile }}</td>
+        <td>{{ employee.department }}</td>
+        
+        <!-- Display employee photo if available -->
+        <td>
+          <img *ngIf="employee.fileDatas" [src]="getUrl(employee.fileDatas[0].filePath)" alt="Employee Photo" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
+        </td>
+
+        <td>
+          <a [routerLink]="['/admin/add-employee/update', employee.id]" class="btn btn-warning btn-sm">Edit</a>
+          <button class="btn btn-danger btn-sm ms-2" (click)="deleteEmployee(employee.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Download Report Section -->
+  <div class="container mt-4">
+    <h2>Download Employee List</h2>
+    <label for="reportFormat">Select Report Format:</label>
+    <select id="reportFormat" name="reportFormat" #format class="form-control w-auto mb-2">
+      <option value="pdf">PDF</option>
+      <option value="html">HTML</option>
+      <option value="xlsx">Excel</option>
+      <option value="csv">CSV</option>
+      <option value="docx">Word</option>
+    </select>
+    <a href="javascript:void(0);" (click)="onDownloadReport(format.value)" class="btn btn-success btn-sm">Download Report</a>
+  </div>
+</div>

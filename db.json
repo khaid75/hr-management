@@ -1,0 +1,25 @@
+{
+  "employees": [
+    {
+      "id": "f619",
+      "name": "Khalid hasan",
+      "email": "khalidmr902@gmail.com",
+      "phone": "01521328478",
+      "designation": "Sales"
+    },
+    {
+      "id": "1167",
+      "name": "Nishi1",
+      "email": "nishi@gmail.com",
+      "phone": "01584575474",
+      "designation": "manager"
+    },
+    {
+      "id": "d05b",
+      "name": "Mahbub",
+      "email": "mahbub@gmail.com",
+      "phone": "01521328478",
+      "designation": "IT"
+    }
+  ]
+}
